@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Printing onto Fabric | Project Case Study</title>
+  <meta name="description" content="Pause-print fabric insertion — tree pattern bonded between plastic layers.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand">Gannon Wanders <span>·</span> Portfolio</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="container container--narrow">
+      <p class="back-link"><a href="projects.html">← All projects</a></p>
+      <header class="hero hero--case">
+        <p class="hero__eyebrow">Experimental fabrication</p>
+        <h1 class="hero__title">3D Printing onto Fabric</h1>
+        <p class="hero__subtitle">Pause the print, introduce textile, resume—letting plastic layers stitch fabric into the body of the part.</p>
+      </header>
+
+      <figure class="figure-block">
+        <img src="Photos ENGR 397/Project 9/Screenshot 2026-04-27 203121.png" alt="3D print with fabric embedded using tree pattern">
+        <figcaption>Result — tree motif with fabric integrated between printed layers.</figcaption>
+      </figure>
+
+      <section class="section prose">
+        <h2 class="section__title">Problem &amp; Design</h2>
+        <p>
+          The design goal was exploratory: could I create a part where fabric is not glued on afterward but structurally married into the print itself? The hypothesis is simple to state and interesting to test: if you pause at a chosen layer height, lay fabric across the partial print, then resume, subsequent extrusion can capture the textile between plastic strata—creating a hybrid object that feels different in the hand than pure PLA. The engineering question is whether the bond is reliable enough to be intentional rather than accidental, and whether the geometry still behaves like a part instead of a messy composite.
+        </p>
+        <p>
+          I chose a tree pattern because it visually rewards layering—branches give the eye places to read depth—and because it felt like a strong match for the “organic substrate meets synthetic structure” vibe of fabric embedded in plastic. The aesthetic goal was secondary to the process goal, but aesthetics still mattered: I wanted a result worth photographing, not just a lab curiosity that only I could appreciate.
+        </p>
+      </section>
+
+      <section class="section prose">
+        <h2 class="section__title">Brainstorming &amp; Why I Created It</h2>
+        <p>
+          I wanted a build that was unapologetically experimental. Not every Honors deliverable needs to be a polished product; some entries should document courage—trying a technique because the learning lives in the attempt. This idea sat in my head as “cool 3D print onto fabric,” which is a fine starting point, but the real motivation was deeper: I like processes that blur categories. Electrical engineering often pushes me toward rigid boards and defined interfaces; this pushed me toward messy interfaces—textile fibers, molten plastic, timing, and hope.
+        </p>
+        <p>
+          Brainstorming considered simpler geometry (flat badges) versus something more sculptural. The tree pattern won because it gave the nozzle paths room to “grab” fabric in multiple regions instead of relying on one lonely overlap line. It also gave the final object a story you can explain in one sentence at a career fair: “I embedded fabric mid-print to change the material behavior of the part.”
+        </p>
+      </section>
+
+      <figure class="figure-block">
+        <img src="Photos ENGR 397/Project 9/Screenshot 2026-04-27 203121.png" alt="Mid-print pause with fabric placed on the build plate">
+        <figcaption>Process / detail — same screenshot file as above (Project 9 folder currently has a single image).</figcaption>
+      </figure>
+
+      <section class="section prose">
+        <h2 class="section__title">Machines / Tools Used</h2>
+        <ul class="tool-list">
+          <li>3D printer (pause/resume workflow at chosen layer height)</li>
+          <li>Slicer software (layer targeting and print control)</li>
+          <li>Fabric material suitable for partial encapsulation trials</li>
+          <li>Filament appropriate to the printer and bond experiments</li>
+        </ul>
+      </section>
+
+      <section class="section prose">
+        <h2 class="section__title">Struggles &amp; Challenges Faced</h2>
+        <p>
+          The central struggle is choreography. Pausing too early risks not having enough structure to support the fabric. Pausing too late risks missing the mechanical window where plastic can still flow around fibers. Placement matters: wrinkles become permanent features; bubbles become weak planes. Temperature matters: fabrics do not all tolerate the same radiant heat from the bed and nozzle neighborhood. I expected novelty; I earned a respect for how many variables hide inside a “simple hack.”
+        </p>
+        <p>
+          There is also the psychological struggle—standing at the printer during the pause, hands steady, trying not to bump the bed or talk yourself into rushing. Some builds teach CAD; this one taught calm timing.
+        </p>
+      </section>
+
+      <section class="section prose reflection">
+        <h2 class="section__title section__title--full">What This Project Taught Me</h2>
+        <p>
+          This project taught me to treat experimentation as a first-class engineering output—not a sideshow. Even if the bond is not “production ready,” the process literacy is: I understand pause workflows, layer awareness, and composite risk in a way I did not before. It also reinforced that the coolest ideas often have the messiest failure modes, and that documenting the mess is still Honors-worthy if you learn from it. Finally, it gave me language for hybrid materials—useful in a world where wearables, soft robotics, and unconventional enclosures keep showing up at the edges of EE.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed and built by Gannon Wanders</p>
+      <a href="https://github.com/yourusername" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

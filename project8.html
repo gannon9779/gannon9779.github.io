@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lithophane Light Box for Mom | Project Case Study</title>
+  <meta name="description" content="ItsLitho lithophane light box — childhood photos, Canva workflow, and 3D print troubleshooting for a birthday gift.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand">Gannon Wanders <span>·</span> Portfolio</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="container container--narrow">
+      <p class="back-link"><a href="projects.html">← All projects</a></p>
+      <header class="hero hero--case">
+        <p class="hero__eyebrow">3D print &amp; light</p>
+        <h1 class="hero__title">Lithophane Light Box for Mom</h1>
+        <p class="hero__subtitle">A birthday build where the emotional brief was easy and the printer’s stubbornness supplied the engineering exam.</p>
+      </header>
+
+      <figure class="figure-block">
+        <img src="Photos ENGR 397/Project 8/Screenshot 2026-04-27 203027.png" alt="Lithophane light box gift with illuminated photo panel">
+        <figcaption>Finished light box — lithophane glow and enclosure fit.</figcaption>
+      </figure>
+
+      <section class="section prose">
+        <h2 class="section__title">Problem &amp; Design</h2>
+        <p>
+          The problem had two layers: emotional and technical. Emotionally, I wanted a birthday gift for my mom that felt specific to our family—not a generic candle, not a last-minute gift card. My mom loves photographs the way some people love music: albums are not clutter; they are evidence that time mattered. A lithophane light box promised a magical translation—flat childhood moments becoming luminous relief when backlit—something she could keep on a shelf and turn on during quiet evenings.
+        </p>
+        <p>
+          Technically, the problem was a pipeline: source images → contrast-safe preprocessing → lithophane geometry generation → print settings that preserve thin features without collapsing → an enclosure that hides the LED mess while distributing light evenly. That pipeline is “simple” in blog posts and lively in real life, where layer height decisions show up as either tender faces or weird moon surfaces.
+        </p>
+      </section>
+
+      <section class="section prose">
+        <h2 class="section__title">Brainstorming &amp; Why I Created It</h2>
+        <p>
+          Brainstorming was less about format and more about curation: which photos translate well into lithophanes, which memories are hers as much as mine, which compositions still read when reduced to thickness variation. I leaned into childhood images because they carry shared nostalgia—birthday cake light, messy kitchens, the kind of photos that are imperfectly composed and perfect emotionally.
+        </p>
+        <p>
+          I used Canva to organize and lightly prepare the visual assets before moving into lithophane tooling. Canva is not “engineering software,” but it is fast for cropping, composition, and quick experiments when you are iterating emotionally as much as technically. From there, I used ItsLitho to generate the lithophane forms the printer could interpret. The workflow is a good example of how I actually build: pick the right cheap tool for the phase you are in, then graduate to the specialist tool when the geometry gets serious.
+        </p>
+      </section>
+
+      <figure class="figure-block">
+        <img src="Photos ENGR 397/Project 8/Screenshot 2026-04-27 203027.png" alt="ItsLitho or slicer view, LED assembly, or print-in-progress for lithophane box">
+        <figcaption>Process / detail — same screenshot file as above (Project 8 folder currently has a single image).</figcaption>
+      </figure>
+
+      <section class="section prose">
+        <h2 class="section__title">Machines / Tools Used</h2>
+        <ul class="tool-list">
+          <li>Canva (image preparation and layout)</li>
+          <li>ItsLitho lithophane generation website / workflow</li>
+          <li>3D printer (lithophane panel and light box components)</li>
+          <li>Slicer software appropriate to the printer (settings iteration)</li>
+          <li>LED light source and enclosure materials for the finished box</li>
+        </ul>
+      </section>
+
+      <section class="section prose">
+        <h2 class="section__title">Struggles &amp; Challenges Faced</h2>
+        <p>
+          The front half of the project moved quickly because the creative decisions felt natural—this photo, that crop, this composition feels like “us.” The back half was classic 3D printing: adhesion anxiety, dialing exposure for thin layers, avoiding stringing that shows up brutally in translucent areas, and re-running prints when a small defect ruins a face everyone will stare at. Lithophanes are unforgiving critics; they reveal every slicer sin in light and shadow.
+        </p>
+        <p>
+          Light box integration added mechanical detail: hiding electronics cleanly, avoiding hot spots, making sure the panel seats securely without warping from heat over time. None of that was conceptually hard, but it is the kind of integration work that separates a prop from a gift someone keeps plugged in.
+        </p>
+      </section>
+
+      <section class="section prose reflection">
+        <h2 class="section__title section__title--full">What This Project Taught Me</h2>
+        <p>
+          This project taught me that meaningful gifts still deserve engineering checklists. Love gets you started; iteration gets you across the finish line. It also reinforced how powerful digital-to-physical workflows can be when they serve a human story—ItsLitho is not magic, but it can feel magical when the lamp turns on. Finally, it reminded me that the printer is a teammate with a personality: respect it, log your settings, and do not pretend the first slice is the final slice.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed and built by Gannon Wanders</p>
+      <a href="https://github.com/yourusername" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

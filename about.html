@@ -1,75 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Nittany STEM Tutoring</title>
-  <link rel="icon" href="assets/logo-icon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Gannon Wanders</title>
+  <meta name="description" content="Electrical engineering student — fabrication, iteration, and meaningful prototypes.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand">Gannon Wanders <span>·</span> Portfolio</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <a class="nav-brand" href="index.html">
-    <img src="assets/logo-icon.png" alt="" width="40" height="40" decoding="async" />
-    <span><span>Nittany</span> STEM Tutoring</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="features.html">Features</a></li>
-    <li><a href="about.html" class="is-active">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="newsletter.html">Newsletter</a></li>
-    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-  <a href="contact.html" class="btn-primary" style="display:none;" id="mob-cta">Book</a>
-</nav>
-<script>
-  if (window.innerWidth <= 900) document.getElementById('mob-cta').style.display = 'inline-block';
-</script>
+  <main>
+    <section class="about-hero container">
+      <h1>About</h1>
+      <div class="prose">
+        <p class="lead">
+          I am an electrical engineering student who keeps one foot in equations and the other in the fab lab. I built this site as part of my Schreyer Honors creative prototyping option—a place to document not just what I made, but how I thought while I made it.
+        </p>
+        <p>
+          I care about objects that are technically defensible and personally honest. A prototype can be “correct” on paper and still feel hollow if the story behind it is thin. I tend to chase projects where those two demands overlap: packaging for a privacy-minded doorbell concept, a trout puzzle rooted in local ecology and family memory, a lithophane light box built from real childhood photographs. Those projects force me to practice product thinking—materials, narrative, failure modes—without pretending I am shipping at industrial scale.
+        </p>
+        <p>
+          Fabrication is where I learn fastest. Iteration is not a slide in a deck; it is re-cutting vinyl, re-truing a laser file, re-threading a machine, or walking back to the printer with a slicer setting I swore I would not touch again. I like the loop: sketch, model, cut, print, test, adjust. I also like the humility that loop enforces. The machines do not care about my timeline.
+        </p>
+        <p>
+          Several entries in this portfolio connect to <strong>Local Eye</strong>, an offline smart doorbell system I developed over the summer. The hardware and software story lives elsewhere; here, you will see how I carried that work into branding exercises—physical boxes, labels, QR codes to GitHub, and language that treats privacy as a first-class design requirement rather than an afterthought.
+        </p>
+        <p>
+          If you are here from recruiting: I am interested in roles where building, testing, and communicating about technology all matter—hardware-adjacent software, prototyping, or product development with a maker’s respect for the details. If you are here from Honors: thank you for reading closely. This portfolio is my attempt to prove that creative work and engineering discipline can share the same table.
+        </p>
+      </div>
+    </section>
+  </main>
 
-<section class="about">
-  <div class="about-inner">
-    <div class="about-visual">
-      <p class="about-quote">The best tutors are the ones who remember what it felt like to not understand something.</p>
-      <p class="about-attr">— Our philosophy, every session</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed and built by Gannon Wanders</p>
+      <a href="https://github.com/yourusername" rel="noopener noreferrer">GitHub</a>
     </div>
-    <div class="about-text">
-      <p class="section-tag">About</p>
-      <h2 style="margin-bottom:20px;">Started by Penn State students who got tired of bad tutoring options.</h2>
-      <p>Nittany STEM Tutoring was built around a simple observation: most tutoring services are either too expensive, too generic, or staffed by people who learned the material years ago and forgot what it&rsquo;s like to be confused by it.</p>
-      <p>We&rsquo;re Penn State students tutoring in <strong>subjects we&rsquo;re actively studying</strong>. We know what SCASD teachers emphasize. We know how AP Calculus is graded. We know what intro coding actually looks like in high school versus college.</p>
-      <p>Every tutor goes through a vetting process — being smart enough to do the math isn&rsquo;t enough. You have to be able to explain it. That&rsquo;s a different skill, and it&rsquo;s the one that matters for your student.</p>
-      <p>We keep our group sizes small, our prices honest, and our focus narrow. <strong>STEM only. State College first.</strong> That&rsquo;s the whole deal.</p>
-    </div>
-  </div>
-</section>
-
-<section class="about-page-video section" style="padding-top:0;">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="section-head" style="text-align:center;">
-      <p class="section-tag">Hear the pitch</p>
-      <h2>About a minute: why we do this</h2>
-      <p class="section-intro" style="max-width:560px;margin:12px auto 0;">Quick intro straight from me—what we offer, who it&rsquo;s for, and how to take the next step after you watch.</p>
-    </div>
-    <div class="video-shell">
-      <video controls playsinline poster="assets/logo-stacked.png" preload="metadata">
-        <source src="assets/about-pitch.mp4" type="video/mp4" />
-        Your browser can&rsquo;t play this video. Use the file <code>assets/about-pitch.mp4</code> or host an MP4/WebM and update the <code>&lt;source&gt;</code>.
-      </video>
-    </div>
-    <p class="video-note">No sound? Check your device volume. To swap in a new clip, replace <code>assets/about-pitch.mp4</code> (keep it under 100&nbsp;MB for GitHub).</p>
-  </div>
-</section>
-
-<div class="footer-wordmark">
-  <a href="index.html" aria-label="Nittany STEM Tutoring — home">
-    <img src="assets/logo-horizontal.png" alt="Nittany STEM Tutoring" width="420" height="96" decoding="async" loading="lazy" />
-  </a>
-</div>
-<footer>
-  <p>© 2026 Nittany STEM Tutoring · State College, PA · <a href="mailto:hello@nittanystemtutoring.com">hello@nittanystemtutoring.com</a></p>
-</footer>
-
+  </footer>
 </body>
 </html>

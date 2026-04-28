@@ -1,118 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nittany STEM Tutoring — State College, PA</title>
-  <meta name="description" content="STEM tutoring in State College, PA. Penn State tutors for middle school, high school, and early college — math, physics, chemistry, and intro coding." />
-  <link rel="icon" href="assets/logo-icon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Engineering Prototyping Portfolio | Gannon Wanders</title>
+  <meta name="description" content="Honors Option portfolio — fabrication, iteration, and meaningful making.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary">
+      <a href="index.html" class="site-nav__brand">Gannon Wanders <span>·</span> Portfolio</a>
+      <ul class="site-nav__links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <a class="nav-brand" href="index.html">
-    <img src="assets/logo-icon.png" alt="" width="40" height="40" decoding="async" />
-    <span><span>Nittany</span> STEM Tutoring</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="features.html">Features</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="newsletter.html">Newsletter</a></li>
-    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-  <a href="contact.html" class="btn-primary" style="display:none;" id="mob-cta">Book</a>
-</nav>
-<script>
-  if (window.innerWidth <= 900) document.getElementById('mob-cta').style.display = 'inline-block';
-</script>
+  <main>
+    <section class="hero container">
+      <p class="hero__eyebrow">Schreyer Honors Option</p>
+      <h1 class="hero__title">Creative Engineering Prototyping Portfolio</h1>
+      <p class="hero__subtitle">Honors Option — Building Meaning Through Making</p>
+      <a class="btn" href="projects.html">View Projects</a>
+    </section>
 
-<section class="hero hero--home" id="home">
-  <div class="hero-inner">
-    <div class="hero-brand">
-      <div class="hero-emblem" aria-hidden="true">
-        <img src="assets/logo-icon.png" alt="" width="280" height="280" decoding="async" />
+    <hr class="rule container">
+
+    <section class="section container">
+      <div class="prose prose--intro">
+        <p>
+          This portfolio is not a random collection of crafts. It is a thread of prototypes that all ask the same question in different ways: how do you take something that matters to you—identity, memory, loyalty, curiosity—and translate it into a physical object that still behaves like engineering work? I keep coming back to the Eagles and Penn State, to music that soundtracks long drives and childhood kitchens, to the trout that swim through the streams near State College, and to the quiet pride of building something my family can hold. Those anchors are not decoration; they are constraints that make the design problem real. When the subject is personal, you cannot hide behind vague “user personas.” You have to own the choices.
+        </p>
+        <p>
+          Across these projects, iteration stopped being an abstract buzzword and became a habit. The embroidery machine humbled me the same week the Cricut app tested my patience. Weeding tiny vinyl pieces for a Grateful Dead graphic taught me that “finished” is often just “good enough after the fourth pass.” Lithophanes and 3D prints reminded me that digital files are promises—what actually lands on the bed of the printer is where honesty shows up. I learned to love constraint: printer bed size forcing a packaging redesign, only orange stock available when I wanted black, a peg board that only works if every hole is where the math says it should be. Constraint is where design becomes engineering.
+        </p>
+        <p>
+          My workflow keeps moving between screen and shop. I live in Illustrator, Design Space, Canva, and the lithophane tools that bridge raster art into geometry the printer understands. That handoff—from pixels to toolpaths, from vectors to laser passes—is the same mental move as going from schematic to breadboard, just with different physics at the end. I care about how the file is built, whether paths are clean, whether tolerances survive the real machine, and whether the object still reads the way I intended once material grain and layer lines enter the picture.
+        </p>
+        <p>
+          Craftsmanship, for me, is what happens when troubleshooting becomes part of the aesthetic process. Embroidery turned me into someone who reads error codes and chases “wiper” issues in Palette software until the thread path behaves. Vinyl taught me that weeding is half design and half hand therapy. 3D printing onto fabric was pure experimentation: pause the job, slip the textile in, resume, and hope the layers bond the way the theory suggests. None of that is glamorous on a spreadsheet, but it is how prototypes become trustworthy.
+        </p>
+        <p>
+          Several pieces here orbit a summer project I call <strong>Local Eye</strong>—an offline smart doorbell concept built around privacy and local control. The packaging and labels became a place to practice product thinking: naming, visual identity, and the ethics of how we talk to users. I put the code on GitHub and added a QR code on the box so “openness” is not a slogan but a physical affordance. The ironic asterisk on the label—pointing to the sentence that says this device does not upload your information—flips the usual fine-print pattern. Transparency should be the headline, not the exception hidden at the bottom. That mindset runs alongside the rest of this work: build things that work, build things that mean something, and be willing to show your work.
+        </p>
       </div>
-      <div class="hero-wordmark">
-        <img src="assets/logo-stacked.png" alt="Nittany STEM Tutoring. State College, PA. Penn State tutors." width="440" height="auto" decoding="async" />
-      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed and built by Gannon Wanders</p>
+      <a href="https://github.com/yourusername" rel="noopener noreferrer">GitHub</a>
     </div>
-    <div class="hero-grid">
-    <div class="hero-copy">
-      <span class="hero-tag">📍 State College, PA</span>
-      <h1>STEM tutoring that actually helps you <em>understand</em>, not just finish homework</h1>
-      <p class="hero-sub">Nittany STEM Tutoring is a local consultancy for families in State College: one-on-one tutoring, small exam-prep groups, and study coaching from Penn State students who are <em>in</em> these courses now—not years removed from them. We focus on algebra through calculus, physics, chemistry, and intro coding, with clear pricing and a process built around real understanding.</p>
-      <div class="hero-btns">
-        <a href="contact.html" class="btn-primary">Book a kickoff</a>
-        <a href="services.html" class="btn-ghost">See services &amp; prices</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <h3>Subjects covered</h3>
-      <div class="subject-chips">
-        <span class="chip">Algebra</span>
-        <span class="chip">Geometry</span>
-        <span class="chip">Pre-Calc</span>
-        <span class="chip">Calculus</span>
-        <span class="chip">Physics</span>
-        <span class="chip">Chemistry</span>
-        <span class="chip">Intro coding</span>
-      </div>
-      <div class="stat-row">
-        <div class="stat"><span class="stat-num">$50</span><span class="stat-label">per hour 1:1</span></div>
-        <div class="stat"><span class="stat-num">Local</span><span class="stat-label">SCASD + PSU</span></div>
-        <div class="stat"><span class="stat-num">STEM</span><span class="stat-label">only</span></div>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-<section class="home-explore">
-  <div class="section-head">
-    <p class="section-tag">Explore</p>
-    <h2>Everything you need to evaluate us</h2>
-    <p class="section-intro">Dig into how we work, who we are, what we charge, and how to reach out—including a sample newsletter with the story behind this consultancy.</p>
-  </div>
-  <div class="home-pillars">
-    <a class="pillar-card" href="features.html">
-      <p class="pillar-tag">Depth</p>
-      <h3>Features</h3>
-      <p>Why we&rsquo;re different from generic chains: STEM-only focus, near-peer tutors, accountability, local curriculum knowledge, and teaching for understanding.</p>
-    </a>
-    <a class="pillar-card" href="about.html">
-      <p class="pillar-tag">Story</p>
-      <h3>About + pitch</h3>
-      <p>Our origin at Penn State and a short video pitch so you can hear the mission directly before you book.</p>
-    </a>
-    <a class="pillar-card" href="services.html">
-      <p class="pillar-tag">Offers</p>
-      <h3>Services &amp; pricing</h3>
-      <p>1:1 tutoring, group exam reviews, and study coaching—with transparent numbers and no surprise fees.</p>
-    </a>
-    <a class="pillar-card" href="contact.html">
-      <p class="pillar-tag">Action</p>
-      <h3>Contact</h3>
-      <p>Send a message through the form, or grab time on the calendar for a kickoff meeting.</p>
-    </a>
-    <a class="pillar-card" href="newsletter.html">
-      <p class="pillar-tag">Letter</p>
-      <h3>Newsletter sample</h3>
-      <p>Persuasive copy, branded layout, a link to this site, and an article on why this tutoring project exists.</p>
-    </a>
-  </div>
-</section>
-
-<div class="footer-wordmark">
-  <a href="index.html" aria-label="Nittany STEM Tutoring — home">
-    <img src="assets/logo-horizontal.png" alt="Nittany STEM Tutoring" width="420" height="96" decoding="async" loading="lazy" />
-  </a>
-</div>
-<footer>
-  <p>© 2026 Nittany STEM Tutoring · State College, PA · <a href="mailto:hello@nittanystemtutoring.com">hello@nittanystemtutoring.com</a></p>
-</footer>
-
+  </footer>
 </body>
 </html>

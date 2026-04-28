@@ -1,0 +1,547 @@
+/* ============================================
+   Creative Engineering Portfolio — Global Styles
+   Theme: Deep navy + gold, Inter typography
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --bg-deep: #0b1f3a;
+  --bg-elevated: #102a4a;
+  --bg-card: rgba(16, 42, 74, 0.65);
+  --gold: #c8a300;
+  --gold-dim: rgba(200, 163, 0, 0.35);
+  --gold-glow: rgba(200, 163, 0, 0.45);
+  --text: #f4f4f4;
+  --text-muted: #9eb0c4;
+  --border-subtle: rgba(200, 163, 0, 0.15);
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --radius: 12px;
+  --transition: 0.22s ease;
+  --max-width: 72rem;
+  --nav-height: 4.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg-deep);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(200, 163, 0, 0.08), transparent),
+    linear-gradient(180deg, #0d2444 0%, var(--bg-deep) 45%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition), opacity var(--transition);
+}
+
+a:hover {
+  color: #e4c94a;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Layout ----- */
+main {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+.container--narrow {
+  width: min(100% - 2rem, 48rem);
+}
+
+/* ----- Sticky Nav ----- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 31, 58, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  min-height: var(--nav-height);
+  padding-block: var(--space-sm);
+}
+
+.site-nav__brand {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.site-nav__brand span {
+  color: var(--gold);
+}
+
+.site-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__links a {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.35rem 0;
+  position: relative;
+}
+
+.site-nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+
+.site-nav__links a:hover,
+.site-nav__links a[aria-current="page"] {
+  color: var(--text);
+}
+
+.site-nav__links a:hover::after,
+.site-nav__links a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ----- Hero ----- */
+.hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  text-align: center;
+}
+
+.hero--case {
+  text-align: left;
+  padding-top: var(--space-lg);
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--gold-dim);
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-md);
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.hero--case .hero__title {
+  margin-inline: 0;
+  max-width: none;
+}
+
+.hero__subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  max-width: 36ch;
+  margin: 0 auto var(--space-lg);
+  line-height: 1.5;
+}
+
+.hero--case .hero__subtitle {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 42ch;
+}
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.85rem;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--gold);
+  background: linear-gradient(135deg, var(--gold) 0%, #a88900 100%);
+  color: var(--bg-deep);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px var(--gold-glow);
+  filter: brightness(1.05);
+  color: var(--bg-deep);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ----- Sections ----- */
+.section {
+  padding: var(--space-lg) 0;
+}
+
+.section__title {
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--gold-dim);
+  display: inline-block;
+  min-width: min(100%, 12rem);
+}
+
+.section__title--full {
+  display: block;
+  width: 100%;
+}
+
+.prose p {
+  margin: 0 0 var(--space-md);
+  color: var(--text);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose--intro {
+  font-size: 1.08rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Divider ----- */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  margin: var(--space-lg) 0;
+  border: 0;
+}
+
+/* ----- Project image blocks ----- */
+.figure-block {
+  margin: var(--space-lg) 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.figure-block:hover {
+  border-color: var(--gold-dim);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--gold-dim);
+}
+
+.figure-block figcaption {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+}
+
+/* ----- Instructor callout ----- */
+.callout {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md);
+  border-left: 4px solid var(--gold);
+  background: var(--bg-card);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  backdrop-filter: blur(8px);
+}
+
+.callout__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+}
+
+.callout p {
+  margin: 0;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* ----- Projects grid ----- */
+.page-header {
+  padding: var(--space-lg) 0 var(--space-md);
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-sm);
+}
+
+.page-header p {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 42ch;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: var(--space-md);
+  padding-bottom: var(--space-xl);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 16px 48px rgba(200, 163, 0, 0.2), 0 0 24px rgba(200, 163, 0, 0.12);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.project-card__image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-card__body {
+  padding: var(--space-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-sm);
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+.project-card:hover .project-card__title {
+  color: var(--gold);
+}
+
+.project-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.project-card__cta {
+  margin-top: var(--space-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ----- Tool list ----- */
+.tool-list {
+  margin: var(--space-md) 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.tool-list li {
+  margin-bottom: var(--space-xs);
+}
+
+.tool-list li::marker {
+  color: var(--gold);
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  margin-top: auto;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(8, 22, 42, 0.6);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.site-footer a {
+  font-weight: 600;
+}
+
+/* ----- About page ----- */
+.about-hero {
+  padding: var(--space-lg) 0;
+}
+
+.about-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin: 0 0 var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+/* ----- Back link on case studies ----- */
+.back-link {
+  display: inline-block;
+  margin-bottom: var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+/* ----- Reflection block ----- */
+.reflection {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: linear-gradient(135deg, rgba(200, 163, 0, 0.08) 0%, transparent 60%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+}
+
+.reflection .section__title {
+  border-bottom-color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 640px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .site-nav__links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding-top: var(--space-lg);
+  }
+
+  .hero--case .hero__title,
+  .hero--case .hero__subtitle {
+    text-align: left;
+  }
+
+  .site-footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .container--narrow {
+    width: min(100% - 3rem, 44rem);
+  }
+}
+
+/* Case study article breathing room */
+main article {
+  padding-bottom: var(--space-xl);
+}
